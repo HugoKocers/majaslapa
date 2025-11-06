@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Card Flipper — Pelmeņi</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="header-slot"></div>
+
+  <main class="centered-page">
+    <section class="section flipper-full">
+      <h1>Card Flipper (WIP)</h1>
+      <article class="board big-board" aria-label="Card flipper">
+        <button class="bcard" onclick="this.classList.toggle('flipped')">
+          <span class="wrapper"><span class="content"><span class="face front"></span><span class="face back"></span></span></span>
+        </button>
+        <button class="bcard" onclick="this.classList.toggle('flipped')">
+          <span class="wrapper"><span class="content"><span class="face front"></span><span class="face back"></span></span></span>
+        </button>
+        <button class="bcard" onclick="this.classList.toggle('flipped')">
+          <span class="wrapper"><span class="content"><span class="face front"></span><span class="face back"></span></span></span>
+        </button>
+      </article>
+      <p style="text-align:center; margin-top:12px;"><a href="index.html" class="link">Back to Home</a></p>
+    </section>
+  </main>
+
+  <div id="footer-slot"></div>
+  <script src="script.js"></script>
+</body>
+</html>

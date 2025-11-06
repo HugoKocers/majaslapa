@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — Pelmeņi</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="header-slot"></div>
+
+  <main class="centered-page">
+    <section class="section contact-page">
+      <h1>Contact Us</h1>
+      <form id="contactForm" novalidate>
+        <label for="cname">Name</label>
+        <input id="cname" name="cname" type="text" required>
+        <label for="cemail">Email</label>
+        <input id="cemail" name="cemail" type="email" required>
+        <label for="cmessage">Message</label>
+        <textarea id="cmessage" name="cmessage" rows="6" required></textarea>
+
+        <div style="text-align:center; margin-top:12px;">
+          <button type="submit" class="btn-primary">Send</button>
+        </div>
+
+        <p id="formMessage" class="form-message" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <div id="footer-slot"></div>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Home — Pelmeņi</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="header-slot"></div>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-inner">
+      <h1>Pelmeņi</h1>
+      <p>Pelmeņi ir Garšīgi</p>
+      <a class="btn-primary" href="#products">View products</a>
+    </div>
+  </section>
+
+  <main class="main-container">
+    <aside class="sidebar">
+      <h3>Sidebar</h3>
+      <p>Useful links, contacts, promos.</p>
+    </aside>
+
+    <div class="content">
+      <!-- optional: hologram toggle (kept) -->
+      <section class="section hologram-section" id="hologram">
+        <h2>Holographic Toggle</h2>
+        <div class="holographic-card" id="hologramToggle" role="button" tabindex="0" aria-pressed="false">
+          <h3>Toggle Theme</h3>
+        </div>
+        <p class="hint">Click hologram or the header button to switch modes</p>
+      </section>
+
+      <!-- PRODUCTS (CRUD + Search + LocalStorage) -->
+      <section id="products" class="section products-section">
+        <div class="products-header">
+          <h2>Products</h2>
+          <div class="products-controls">
+            <input id="searchInput" class="search-input" type="search" placeholder="Search products..." aria-label="Search products">
+            <button id="createCardBtn" class="btn-secondary">Create</button>
+          </div>
+        </div>
+        <div id="cardContainer" class="card-container" aria-live="polite"></div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Product Modal -->
+  <div id="cardModal" class="modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-inner">
+      <button class="modal-close" id="cardModalClose" aria-label="Close">&times;</button>
+
+      <div id="cardModalView" class="modal-view">
+        <h3 id="modalTitle"></h3>
+        <p id="modalDesc"></p>
+        <div style="text-align:center; margin-top:12px;">
+          <button id="modalEditBtn" class="btn-primary small">Edit</button>
+          <button id="modalDeleteBtn" class="btn-danger">Delete</button>
+        </div>
+      </div>
+
+      <form id="cardForm" class="modal-form" style="display:none;">
+        <h3 id="cardFormTitle">Create Card</h3>
+        <label>Title</label>
+        <input id="cardTitle" required />
+        <label>Description</label>
+        <textarea id="cardDesc" rows="4" required></textarea>
+        <label>Image URL (optional)</label>
+        <input id="cardImage" placeholder="https://..." />
+        <div style="display:flex; gap:.5rem; justify-content:center; margin-top:12px;">
+          <button type="submit" class="btn-primary" id="cardFormSave">Save</button>
+          <button type="button" class="btn-secondary" id="cardFormCancel">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div id="footer-slot"></div>
+  <script src="script.js"></script>
+</body>
+</html>
