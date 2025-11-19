@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deck Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <div data-include="components/header.html"></div>
+
+  <main class="dashboard-container">
+    <h1>Deck of Cards Dashboard</h1>
+
+    <div class="dashboard-controls">
+      <input type="text" id="cardSearch" placeholder="Search cards... (e.g. Queen, Hearts)">
+      <button id="reloadDeckBtn" class="btn-secondary">Reload Deck</button>
+    </div>
+
+    <h3>Search History</h3>
+    <ul id="searchHistory" class="search-history"></ul>
+
+    <div id="dashboardCards" class="dashboard-grid"></div>
+  </main>
+
+  <!-- FOOTER -->
+  <div data-include="components/footer.html"></div>
+
+  <script src="dashboard.js"></script>
+  <script src="script.js"></script>
+  <script>
+document.querySelectorAll("[data-include]").forEach(el => {
+  fetch(el.getAttribute("data-include"))
+    .then(res => res.text())
+    .then(data => el.outerHTML = data);
+});
+</script>
+
+</body>
+
+</html>
