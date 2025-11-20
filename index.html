@@ -80,5 +80,15 @@
 
   <div id="footer-slot"></div>
   <script src="script.js"></script>
+  <script>
+fetch('components/header.html')
+  .then(res => res.text())
+  .then(data => document.getElementById('header-slot').innerHTML = data);
+
+fetch('components/footer.html')
+  .then(res => res.text())
+  .then(data => document.getElementById('footer-slot').innerHTML = data);
+</script>
+
 </body>
 </html>
