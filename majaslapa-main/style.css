@@ -276,3 +276,50 @@ body.light-mode .dashboard-card {
 .search-history li:hover {
   background: #00ffff66;
 }
+
+/* ===== Ensure header / footer text is black in light mode ===== */
+body.light-mode,
+body.light-mode .site-header,
+body.light-mode .site-footer,
+body.light-mode #header-slot,
+body.light-mode #footer-slot {
+  color: #111 !important;
+}
+
+/* Make all header elements dark */
+body.light-mode .logo,
+body.light-mode .nav-link,
+body.light-mode .dropbtn,
+body.light-mode .hamburger,
+body.light-mode .theme-toggle,
+body.light-mode .header-actions,
+body.light-mode .header-right {
+  color: #111 !important;
+}
+
+/* Dropdown text + background for contrast in light mode */
+body.light-mode .dropdown-content {
+  background: #fff !important;
+  border: 1px solid #e6e6e6 !important;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.06) !important;
+}
+body.light-mode .dropdown-content a {
+  color: #111 !important;
+}
+body.light-mode .dropdown-content a:hover {
+  color: #0056b3 !important;
+  background: rgba(0,0,0,0.04) !important;
+}
+
+/* Footer link and heading colors */
+body.light-mode .site-footer,
+body.light-mode .site-footer a,
+body.light-mode .footer-inner h4 {
+  color: #111 !important;
+}
+
+/* Ensure included header/footer markup inherits these colors */
+body.light-mode #header-slot *,
+body.light-mode #footer-slot * {
+  color: inherit !important;
+}
